@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Portfolio - SHIRRAM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #fff;
+            color: #000;
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            color: #000;
+        }
+
+        .profile-picture {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            position: absolute;
+            top: 25px;
+            right: 20px;
+        }
+
+        nav {
+            background-color: #000;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        nav ul {
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #fff;
+        }
+
+        .section-content {
+            background-color: #fff;
+            color: #000;
+            padding: 2rem;
+            margin: 1rem;
+            border-radius: 20px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            text-align: justify;
+        }
+
+        .download-button {
+            background-color: #000;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            text-decoration: none;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 10px;
+        }
+
+        .download-button:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background-color: #fff;
+            color: #000;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <img src="shiram.jpg" alt="Profile Picture" class="profile-picture">
+            <h1>SHRIRAM</h1>
+            <p><b>BCA Student</b></p>
+        </div>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <section id="about">
+        <div class="section-content">
+            <h2>About Me</h2>
+            <p>I am a Computer Science student at Swami Dayananda College with a strong passion for technology and innovation. Currently, I am working on an e-waste project, aiming to find sustainable solutions for electronic waste management.</p>
+        </div>
+    </section>
+
+    <section id="education">
+        <div class="section-content">
+            <h2>Education</h2>
+            <p>I completed my schooling at VS boys Higher Secondary School. Currently, I am pursuing a Bachelor of Computer Applications (BCA) at Swami Dayananda College, where I am gaining expertise in programming, cloud computing, and software development.</p>
+        </div>
+    </section>
+
+    <section id="skills">
+        <div class="section-content">
+            <h2>Skills</h2>
+            <ul>
+                <li>Cloud Computing</li>
+                <li>Python</li>
+                <li>HTML/CSS</li>
+                <li>C++</li>
+                <li>JavaScript</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="section-content">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Smart Waste Management System</a> - A project that utilizes IoT sensors to optimize waste collection and recycling processes.</li>
+                <li><a href="#">AI-Based Resume Analyzer</a> - A machine learning model that evaluates resumes and provides suggestions for improvements.</li>
+                <li><a href="#">Personal Finance Tracker</a> - A web application that helps users manage expenses and savings efficiently.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="resume">
+        <div class="section-content" style="text-align: center;">
+            <h2>Resume</h2>
+            <a href="sriramppre.pdf"_blank" class="download-button">Download CV</a>
+            <a href="sriram_certificate.pdf" target="_blank" class="download-button">Certificate</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SHIRRAM</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
